@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webhome Trainee Test</title>
+</head>
+<body>
+  <header>
+    <link href='css/styles.css' rel='stylesheet' type='text/css'>
+  </header>
+  <main>
+    <div class="main_intersection_wrapper wrapper">
+    <section class='comment_input_section'>
+      <div class='wrapper'>
+      <h2>Comments</h2>
+      <input type="text" class="authorName" id="authorName" placeholder="name Имя" required maxlength="30">
+      <p class="error_message_authorName" id="error_message_authorName">This field is required это поле обязательно для заполнения </p>
+      <textarea name="comments" class="commentTextarea" id="commentTextarea" placeholder="text комментарий" cols="30" rows="10" required maxlength="30"></textarea>
+      <p class="error_message_commentTextarea" id="error_message_commentTextarea">This field is required это поле обязательно для заполнения </p>
+      <button class="button postButton" id="postButton">POST</button>
+      <p class="alert_successfully_posted" id="alert_successfully_posted">Comment posted Комментарий опубликован </p>
+    </div>
+    </section>
+
+    <section class="comment_output_section">
+      <h4 id="responses_quantity"></h4>
+      <div class="wrapper comments_wrapper" id="comments_wrapper">
+      <hr class="hr_bold">
+    </div>
+    <button class="button showMoreCommentsButton" id="showMoreCommentsButton">Показать ещё</button>
+    </section>
+
+    <section class="pagination_section">
+      <div class="pagination_div">                  
+          <a href="#" id="navGoFirstPage" onclick="changeCommentsPage('navGoFirstPage')">1</a>
+          <a href="#" id="navPrevPage" onclick="changeCommentsPage('navPrevPage')">&laquo;</a>
+          <a href="#" id="navGo1" onclick="changeCommentsPage('navGo1')">1</a>
+          <a href="#" id="navGo2" onclick="changeCommentsPage('navGo2')">2</a>
+          <a href="#" id="navGo3" onclick="changeCommentsPage('navGo3')">3</a>
+          <a href="#" id="navGo4" onclick="changeCommentsPage('navGo4')">4</a>
+          <a href="#" id="navGo5" onclick="changeCommentsPage('navGo5')">5</a>
+          <a href="#" id="navNextPage" onclick="changeCommentsPage('navNextPage')">&raquo;</a>          
+          <a href="#" id="navLastPage" onclick="changeCommentsPage('navLastPage')"></a>
+
+      </div>
+    </section>
+
+  </div>
+  </main>
+  <div class="spinner" id="spinner"><i class="fa fa-spinner fa-spin fa-10x"></i></div>
+  <script type="text/javascript" src="src/index.js" defer></script>
+  <!-- <script type="text/javascript" src="dist/main.js" defer></script> -->
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
+</body>
+</html>
